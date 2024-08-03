@@ -13,9 +13,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Test secrets
-      run: echo "FTP_USERNAME: ${{ secrets.FTP_USERNAME }} FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}"
-
     - name: Upload files via FTP
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
@@ -23,4 +20,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./
-        server-dir: /public_html/
+        server-dir: ./
