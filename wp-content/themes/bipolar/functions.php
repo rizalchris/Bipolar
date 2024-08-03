@@ -107,4 +107,3 @@ function disable_embeds_rewrites($rules) {
     }
     return $rules;
 }
-?>
